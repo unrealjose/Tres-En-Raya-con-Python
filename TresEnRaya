@@ -118,6 +118,8 @@ def ComprobarSiJugador2HaGanado():
 		os.system('pause')
 		exit()
 
+# Las variables en minusculas representa a los 9 huecos del tablero y se iran cambiando por X o O segun el transcurso de la partida
+# Las variables en mayuscula representa si esa zona del tablero esta vacia o ya tiene una X o una O
 
 Jugador1="Jugador 1"
 Jugador2="Jugador 2"
