@@ -1,0 +1,253 @@
+import os
+
+def Inicio():
+	print("  .---.---.---.")
+	print("  | q | w | e |")
+	print("  :---:---:---:")
+	print("  | a | s | d |")
+	print("  :---:---:---:")
+	print("  | z | x | c |")
+	print("  .---.---.---.")
+
+def Juego():
+	print("  .---.---.---.")
+	print("  | "+q+" | "+w+" | "+e+" |")
+	print("  :---:---:---:")
+	print("  | "+a+" | "+s+" | "+d+" |")
+	print("  :---:---:---:")
+	print("  | "+z+" | "+x+" | "+c+" |")
+	print("  .---.---.---.")
+
+def ComprobarSiJugador1HaGanado():
+	if q=="X" and w=="X" and e=="X":
+		print("########################")
+		print("Victoria del jugador 1")
+		print("########################")
+		os.system('pause')
+		exit()
+	if a=="X" and s=="X" and d=="X":
+		print("########################")
+		print("Victoria del jugador 1")
+		print("########################")
+		os.system('pause')
+		exit()
+	if z=="X" and x=="X" and c=="X":
+		print("########################")
+		print("Victoria del jugador 1")
+		print("########################")
+		os.system('pause')
+		exit()
+	if q=="X" and a=="X" and z=="X":
+		print("########################")
+		print("Victoria del jugador 1")
+		print("########################")
+		os.system('pause')
+		exit()
+	if w=="X" and s=="X" and x=="X":
+		print("########################")
+		print("Victoria del jugador 1")
+		print("########################")
+		os.system('pause')
+		exit()
+	if e=="X" and d=="X" and c=="X":
+		print("########################")
+		print("Victoria del jugador 1")
+		print("########################")
+		os.system('pause')
+		exit()
+	if q=="X" and s=="X" and c=="X":
+		print("########################")
+		print("Victoria del jugador 1")
+		print("########################")
+		os.system('pause')
+		exit()
+	if z=="X" and s=="X" and e=="X":
+		print("########################")
+		print("Victoria del jugador 1")
+		print("########################")
+		os.system('pause')
+		exit()
+
+def ComprobarSiJugador2HaGanado():
+	if q=="O" and w=="O" and e=="O":
+		print("########################")
+		print("Victoria del jugador 2")
+		print("########################")
+		os.system('pause')
+		exit()
+	if a=="O" and s=="O" and d=="O":
+		print("########################")
+		print("Victoria del jugador 2")
+		print("########################")
+		os.system('pause')
+		exit()
+	if z=="O" and x=="O" and c=="O":
+		print("########################")
+		print("Victoria del jugador 2")
+		print("########################")
+		os.system('pause')
+		exit()
+	if q=="O" and a=="O" and z=="O":
+		print("########################")
+		print("Victoria del jugador 2")
+		print("########################")
+		os.system('pause')
+		exit()
+	if w=="O" and s=="O" and x=="O":
+		print("########################")
+		print("Victoria del jugador 2")
+		print("########################")
+		os.system('pause')
+		exit()
+	if e=="O" and d=="O" and c=="O":
+		print("########################")
+		print("Victoria del jugador 2")
+		print("########################")
+		os.system('pause')
+		exit()
+	if q=="O" and s=="O" and c=="O":
+		print("########################")
+		print("Victoria del jugador 2")
+		print("########################")
+		os.system('pause')
+		exit()
+	if z=="O" and s=="O" and e=="O":
+		print("########################")
+		print("Victoria del jugador 2")
+		print("########################")
+		os.system('pause')
+		exit()
+
+
+Jugador1="Jugador 1"
+Jugador2="Jugador 2"
+q=" "
+Q = False
+w=" "
+W = False
+e=" "
+E = False
+a=" "
+A = False
+s=" "
+S = False
+d=" "
+D = False
+z=" "
+Z = False
+x=" "
+X = False
+c=" "
+C = False
+
+Inicio()
+
+while True:
+	while True:
+		print(Jugador1)
+		movimiento=input()
+		if movimiento=="q" and Q==False:
+			q="X"
+			Q = True
+			Juego()
+			break
+		if movimiento=="w" and W==False:
+			w="X"
+			W = True
+			Juego()
+			break
+		if movimiento=="e" and E==False:
+			e="X"
+			E = True
+			Juego()
+			break
+		if movimiento=="a" and A==False:
+			a="X"
+			A = True
+			Juego()
+			break
+		if movimiento=="s" and S==False:
+			s="X"
+			S = True
+			Juego()
+			break
+		if movimiento=="d" and D==False:
+			d="X"
+			D = True
+			Juego()
+			break
+		if movimiento=="z" and Z==False:
+			z="X"
+			Z = True
+			Juego()
+			break
+		if movimiento=="x" and X==False:
+			x="X"
+			X = True
+			Juego()
+			break
+		if movimiento=="c" and C==False:
+			c="X"
+			C = True
+			Juego()
+			break
+		if Q==True and W==True and E==True and A==True and S==True and D==True and Z==True and X==True and C==True:
+			print("Empate")
+			os.system('pause')
+			exit()
+	ComprobarSiJugador1HaGanado()
+	while True:
+		print(Jugador2)
+		movimiento=input()
+		if movimiento=="q" and Q==False:
+			q="O"
+			Q=True
+			Juego()
+			break
+		if movimiento=="w" and W==False:
+			w="O"
+			W=True
+			Juego()
+			break
+		if movimiento=="e" and E==False:
+			e="O"
+			E=True
+			Juego()
+			break
+		if movimiento=="a" and A==False:
+			a="O"
+			A=True
+			Juego()
+			break
+		if movimiento=="s" and S==False:
+			s="O"
+			S=True
+			Juego()
+			break
+		if movimiento=="d" and D==False:
+			d="O"
+			D=True
+			Juego()
+			break
+		if movimiento=="z" and Z==False:
+			z="O"
+			Z=True
+			Juego()
+			break
+		if movimiento=="x" and X==False:
+			x="O"
+			X=True
+			Juego()
+			break
+		if movimiento=="c" and C==False:
+			c="O"
+			C=True
+			Juego()
+			break
+		if Q==True and W==True and E==True and A==True and S==True and D==True and Z==True and X==True and C==True:
+			print("Empate")
+			os.system('pause')
+			exit()
+	ComprobarSiJugador2HaGanado()
+
+os.system('pause')
