@@ -144,6 +144,8 @@ C = False
 
 Inicio()
 
+#Aqui empieza el juego.
+
 while True:
 	while True:
 		print(Jugador1)
