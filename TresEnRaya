@@ -18,111 +18,112 @@ def Juego():
 	print("  | "+z+" | "+x+" | "+c+" |")
 	print("  .---.---.---.")
 
-def ComprobarSiJugador1HaGanado():
-	if q=="X" and w=="X" and e=="X":
+def Partida(Jugador,ficha):
+	while True:
+		global q,w,e,a,s,d,z,x,c,Q,W,E,A,S,D,Z,X,C
+		print("Turno de "+Jugador+":")
+		movimiento=input()
+		if movimiento=="q" and Q==False:
+			q=ficha
+			Q = True
+			Juego()
+			break
+		if movimiento=="w" and W==False:
+			w=ficha
+			W = True
+			Juego()
+			break
+		if movimiento=="e" and E==False:
+			e=ficha
+			E = True
+			Juego()
+			break
+		if movimiento=="a" and A==False:
+			a=ficha
+			A = True
+			Juego()
+			break
+		if movimiento=="s" and S==False:
+			s=ficha
+			S = True
+			Juego()
+			break
+		if movimiento=="d" and D==False:
+			d=ficha
+			D = True
+			Juego()
+			break
+		if movimiento=="z" and Z==False:
+			z=ficha
+			Z = True
+			Juego()
+			break
+		if movimiento=="x" and X==False:
+			x=ficha
+			X = True
+			Juego()
+			break
+		if movimiento=="c" and C==False:
+			c=ficha
+			C = True
+			Juego()
+			break
+		if Q==True and W==True and E==True and A==True and S==True and D==True and Z==True and X==True and C==True:
+			print("Empate")
+			os.system('pause')
+			exit()
+
+def ComprobarSiJugadorHaGanado(Jugador,ficha):
+	if q==ficha and w==ficha and e==ficha:
 		print("########################")
-		print("Victoria del jugador 1")
+		print("Victoria del "+Jugador)
 		print("########################")
 		os.system('pause')
 		exit()
-	if a=="X" and s=="X" and d=="X":
+	if a==ficha and s==ficha and d==ficha:
 		print("########################")
-		print("Victoria del jugador 1")
-		print("########################")
-		os.system('pause')
-		exit()
-	if z=="X" and x=="X" and c=="X":
-		print("########################")
-		print("Victoria del jugador 1")
+		print("Victoria del "+Jugador)
 		print("########################")
 		os.system('pause')
 		exit()
-	if q=="X" and a=="X" and z=="X":
+	if z==ficha and x==ficha and c==ficha:
 		print("########################")
-		print("Victoria del jugador 1")
-		print("########################")
-		os.system('pause')
-		exit()
-	if w=="X" and s=="X" and x=="X":
-		print("########################")
-		print("Victoria del jugador 1")
+		print("Victoria del "+Jugador)
 		print("########################")
 		os.system('pause')
 		exit()
-	if e=="X" and d=="X" and c=="X":
+	if q==ficha and a==ficha and z==ficha:
 		print("########################")
-		print("Victoria del jugador 1")
-		print("########################")
-		os.system('pause')
-		exit()
-	if q=="X" and s=="X" and c=="X":
-		print("########################")
-		print("Victoria del jugador 1")
+		print("Victoria del "+Jugador)
 		print("########################")
 		os.system('pause')
 		exit()
-	if z=="X" and s=="X" and e=="X":
+	if w==ficha and s==ficha and x==ficha:
 		print("########################")
-		print("Victoria del jugador 1")
+		print("Victoria del "+Jugador)
+		print("########################")
+		os.system('pause')
+		exit()
+	if e==ficha and d==ficha and c==ficha:
+		print("########################")
+		print("Victoria del "+Jugador)
+		print("########################")
+		os.system('pause')
+		exit()
+	if q==ficha and s==ficha and c==ficha:
+		print("########################")
+		print("Victoria del "+Jugador)
+		print("########################")
+		os.system('pause')
+		exit()
+	if z==ficha and s==ficha and e==ficha:
+		print("########################")
+		print("Victoria del "+Jugador)
 		print("########################")
 		os.system('pause')
 		exit()
 
-def ComprobarSiJugador2HaGanado():
-	if q=="O" and w=="O" and e=="O":
-		print("########################")
-		print("Victoria del jugador 2")
-		print("########################")
-		os.system('pause')
-		exit()
-	if a=="O" and s=="O" and d=="O":
-		print("########################")
-		print("Victoria del jugador 2")
-		print("########################")
-		os.system('pause')
-		exit()
-	if z=="O" and x=="O" and c=="O":
-		print("########################")
-		print("Victoria del jugador 2")
-		print("########################")
-		os.system('pause')
-		exit()
-	if q=="O" and a=="O" and z=="O":
-		print("########################")
-		print("Victoria del jugador 2")
-		print("########################")
-		os.system('pause')
-		exit()
-	if w=="O" and s=="O" and x=="O":
-		print("########################")
-		print("Victoria del jugador 2")
-		print("########################")
-		os.system('pause')
-		exit()
-	if e=="O" and d=="O" and c=="O":
-		print("########################")
-		print("Victoria del jugador 2")
-		print("########################")
-		os.system('pause')
-		exit()
-	if q=="O" and s=="O" and c=="O":
-		print("########################")
-		print("Victoria del jugador 2")
-		print("########################")
-		os.system('pause')
-		exit()
-	if z=="O" and s=="O" and e=="O":
-		print("########################")
-		print("Victoria del jugador 2")
-		print("########################")
-		os.system('pause')
-		exit()
-
-# Las variables en minusculas representa a los 9 huecos del tablero y se iran cambiando por X o O segun el transcurso de la partida
-# Las variables en mayusculas representa si esa zona del tablero esta vacia o ya tiene una X o una O
-
-Jugador1="Jugador 1"
-Jugador2="Jugador 2"
+ficha=""
 q=" "
 Q = False
 w=" "
@@ -142,116 +143,15 @@ X = False
 c=" "
 C = False
 
+Jugador1=input("Nombre del Jugador 1: ")
+Jugador2=input("Nombre del Jugador 2: ")
+
 Inicio()
 
-#Aqui empieza el juego.
-
 while True:
-	while True:
-		print(Jugador1)
-		movimiento=input()
-		if movimiento=="q" and Q==False:
-			q="X"
-			Q = True
-			Juego()
-			break
-		if movimiento=="w" and W==False:
-			w="X"
-			W = True
-			Juego()
-			break
-		if movimiento=="e" and E==False:
-			e="X"
-			E = True
-			Juego()
-			break
-		if movimiento=="a" and A==False:
-			a="X"
-			A = True
-			Juego()
-			break
-		if movimiento=="s" and S==False:
-			s="X"
-			S = True
-			Juego()
-			break
-		if movimiento=="d" and D==False:
-			d="X"
-			D = True
-			Juego()
-			break
-		if movimiento=="z" and Z==False:
-			z="X"
-			Z = True
-			Juego()
-			break
-		if movimiento=="x" and X==False:
-			x="X"
-			X = True
-			Juego()
-			break
-		if movimiento=="c" and C==False:
-			c="X"
-			C = True
-			Juego()
-			break
-		if Q==True and W==True and E==True and A==True and S==True and D==True and Z==True and X==True and C==True:
-			print("Empate")
-			os.system('pause')
-			exit()
-	ComprobarSiJugador1HaGanado()
-	while True:
-		print(Jugador2)
-		movimiento=input()
-		if movimiento=="q" and Q==False:
-			q="O"
-			Q=True
-			Juego()
-			break
-		if movimiento=="w" and W==False:
-			w="O"
-			W=True
-			Juego()
-			break
-		if movimiento=="e" and E==False:
-			e="O"
-			E=True
-			Juego()
-			break
-		if movimiento=="a" and A==False:
-			a="O"
-			A=True
-			Juego()
-			break
-		if movimiento=="s" and S==False:
-			s="O"
-			S=True
-			Juego()
-			break
-		if movimiento=="d" and D==False:
-			d="O"
-			D=True
-			Juego()
-			break
-		if movimiento=="z" and Z==False:
-			z="O"
-			Z=True
-			Juego()
-			break
-		if movimiento=="x" and X==False:
-			x="O"
-			X=True
-			Juego()
-			break
-		if movimiento=="c" and C==False:
-			c="O"
-			C=True
-			Juego()
-			break
-		if Q==True and W==True and E==True and A==True and S==True and D==True and Z==True and X==True and C==True:
-			print("Empate")
-			os.system('pause')
-			exit()
-	ComprobarSiJugador2HaGanado()
+	Partida(Jugador1,"X")
+	ComprobarSiJugadorHaGanado(Jugador1,"X")
+	Partida(Jugador2,"O")
+	ComprobarSiJugadorHaGanado(Jugador2,"O")
 
 os.system('pause')
